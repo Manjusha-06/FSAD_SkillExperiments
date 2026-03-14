@@ -1,0 +1,32 @@
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+   <!-- enable annotation based configuration -->
+   <context:annotation-config />
+   
+   
+   
+   <!-- configure Product bean -->
+   <bean id="cou" class="com.klu.Course">
+     <constructor-arg name="courseName" value="Spring FrameWork"></constructor-arg>
+     <constructor-arg name="duration" value="6"></constructor-arg>
+   </bean>
+   
+   <!-- configure customer bean -->
+   <bean id="stud" class="com.klu.Student">
+     <property name="studentId" value="101"></property>
+     <property name="name" value="Rajesh"></property>
+     <property name="year" value="2026"></property>
+     <property name="email" value="rajesh@gmail.com"></property>
+     <property name="phoneNumber" value="9807658970"></property>
+   </bean>
+   
+</beans> 
